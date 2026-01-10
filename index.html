@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Wedding Invitation | Lisyuniverse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Undangan Pernikahan Yunus & Lisfia - The Wedding Documentary">
+  <meta name="keywords" content="wedding, invitation, documentary, Yunus, Lisfia">
+  <meta name="author" content="Fix Nikah">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="asset/img/N_logo.png">
+
+</head>
+
+<body>
+
+  <!-- 🔴 OPENING SCREEN -->
+  <section id="opening" class="opening">
+    <div class="opening-content">
+
+      <!-- LOGO FIXNIKAH -->
+      <img src="asset/img/logo-fixnikah.png" alt="Fix Nikah" class="fixnikah-logo">
+
+      <p class="who-text">Who’s watching?</p>
+
+      <!-- AVATAR -->
+      <div class="guest-profile">
+        <img src="asset/img/avatar-guest.png" alt="Guest" class="guest-avatar">
+        <p class="guest-name" id="guestTo">Nama Tamu</p>
+      </div>
+
+      <button id="openInvitation" class="btn-open-outline">
+        OPEN INVITATION
+      </button>
+
+    </div>
+  </section>
+
+  <!-- 🎬 POSTER LIGHTBOX -->
+  <div id="posterBox" class="poster-box">
+    <div class="poster-content">
+
+      <div class="poster-info">
+        <img src="asset/img/logo-fixnikah.png" alt="Fixnikah" class="poster-logo">
+
+        <h2 class="nf-title">Yunus & Lisfia</h2>
+        <p class="poster-title">The Wedding</p>
+
+        <div class="poster-date">
+          <span class="coming-badge">Coming Soon</span>
+          <span class="coming-date">26 Maret 2026</span>
+        </div>
+
+
+        <div class="poster-tags">
+          <span>#getmarried</span>
+          <span>#romantic</span>
+          <span>#lisyuniverse</span>
+          <span>#documenter</span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- 🎬 MAIN CONTENT -->
+  <main id="invitation" class="hidden">
+
+    <!-- 🎞 HERO -->
+    <section class="netflix-hero-video ">
+
+      <!-- ✅ NATIVE MP4 (PRIORITY) -->
+      <!-- <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="asset/img/video-poster.jpg">
+            <source src="asset/img/trailer.mp4" type="video/mp4">
+          </video> -->
+
+      <!-- 🔁 YOUTUBE FALLBACK (OPTIONAL) -->
+
+      <iframe class="hero-video"
+        src="https://www.youtube.com/embed/_gq8r56DVPQ?autoplay=1&mute=1&loop=1&controls=0&playsinline=1&playlist=_gq8r56DVPQ&rel=0&showinfo=0&modestbranding=1"
+        frameborder="0" allow="autoplay; encrypted-media">
+      </iframe>
+
+
+    </section>
+
+    <!-- 📄 CONTENT -->
+    <section class="netflix-content-section reveal">
+
+      <div class="nf-label reveal">
+        <img src="asset/img/N_logo.png" alt="Netflix N">
+        <span>DOCUMENTARY</span>
+      </div>
+
+      <h1 class="nf-title reveal">
+        Yunus & Lisfia:<br>
+      </h1>
+      <div class="nf-meta reveal">
+        <span class="match">100% Match</span>
+        <span class="meta-sep">|</span>
+        <span class="meta-date">26 Maret 2026</span>
+        <span class="badge">HD</span>
+        <span class="badge badge-4k">4KHD🎬</span>
+      </div>
+      <span class="coming-soon-match reveal">Get married soon ! 🎬</span>
+
+
+      <p class="nf-desc reveal">
+        Takdir membawa Yunus dan Lisfia dalam situasi yang tepat,
+        di mana keduanya telah siap untuk memulai hubungan bersama,
+        Berbekal kesiapan hati untuk saling melengkapi, 
+        tibalah mereka di awal perjalanan baru menuju muara pernikahan.
+      </p>
+
+      <!-- 🕋 QUOTE -->
+      <blockquote class="nf-quote quote-reveal">
+        “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+        pasangan-pasangan untukmu dari jenismu sendiri,
+        agar kamu merasa tenteram kepadanya,
+        dan Dia menjadikan di antaramu rasa kasih dan sayang.”
+        <span>(QS. Ar-Rum : 21)</span>
+      </blockquote>
+
+    </section>
+
+
+    <!-- 🚨 BREAKING NEWS -->
+    <section class="section breaking-news-section">
+
+      <h2 class="breaking-title reveal">
+        Breaking News
+      </h2>
+
+      <!-- 📸 PHOTO CARD -->
+      <div class="news-photo-card reveal">
+
+        <div class="photo-slider" id="breakslide">
+          <img src="asset/img/breakingnews.jpg" class="slide active" alt="">
+          <img src="asset/img/poster-wedding.JPG" class="slide" alt="">
+        </div>
+
+      </div>
+
+      <!-- 📝 TEXT (NO CARD) -->
+      <div class="news-text reveal">
+        <p>
+          Hai semuanya! Ada kabar gembira nih, kita mau
+          ngabarin kalau kita bakal segera menikah!
+        </p>
+
+        <p>
+          Mohon doanya yaa supaya semuanya lancar, 
+          kita bisa segera membangun rumah tangga yang bahagia. semoga semua
+          niat baik ini dilancarkan dan pernikahan kami menjadi sakinah, mawaddah,
+          warahmah Aamiin..
+        </p>
+
+        <p>Makasih banyak atas doa dan dukungannya!</p>
+
+        <p>
+          Best regards,<br>
+          Yunus & Lisfia
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- 🎬 BRIDE & GROOM -->
+
+    <section class="bride-groom-section">
+
+      <h2 class="section-title reveal">
+        Bride & Groom
+      </h2>
+
+      <div class="bride-groom">
+
+        <!-- 👔 GROOM -->
+        <div class="person-card flip-card reveal-flip">
+
+          <div class="person-photo flip-card reveal-flip">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="asset/img/yunus1.jpg" alt="Yunus">
+              </div>
+              <div class="flip-back">
+                <img src="asset/img/yunus2.jpg" alt="Yunus Alt">
+              </div>
+            </div>
+          </div>
+
+          <h3 class="person-name">
+            Yunus
+          </h3>
+
+          <p class="person-desc">
+            Muhamad Yunus S.Kom<br>
+            Putra dari Bapak Karsim dan Ibu Darsiti (Almh)
+          </p>
+          <div class="person-social">
+            <a href="https://instagram.com/halloyunuss" target="_blank" class="instagram-link">
+              <i class="fa-brands fa-instagram"></i>
+              <span>@halloyunus</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- 👰 BRIDE -->
+        <div class="person-card flip-card reveal-flip">
+
+          <div class="person-photo flip-card reveal-flip">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="asset/img/Lisfia1.jpg" alt="Lisfia">
+              </div>
+              <div class="flip-back">
+                <img src="asset/img/lisfia2.jpg" alt="Lisfia Alt">
+              </div>
+            </div>
+          </div>
+
+          <h3 class="person-name">
+            Lisfia
+          </h3>
+
+          <p class="person-desc">
+            Lisfia Nurhalisa S.T<br>
+            Putri dari Bapak Rusdiyana dan Ibu Yanah Rosiyanah
+          </p>
+          <div class="person-social">
+            <a href="https://instagram.com/lisfianurhalisa" target="_blank" class="instagram-link">
+              <i class="fab fa-instagram"></i>
+              <span>@lisfianurhalisa</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <!-- 📸 FOTO TAMBAHAN -->
+      <div class="news-photo-card reveal">
+        <div class="news-slider">
+          <img src="asset/img/couple1.jpg" alt="Couple Photo">
+          <img src="asset/img/couple3.jpg" alt="Couple Photo">
+          <img src="asset/img/couple2.jpg" alt="Couple Photo">
+          <img src="asset/img/couple4.jpg" alt="Couple Photo">
+          <img src="asset/img/couple7.jpg" alt="Couple Photo">
+          <img src="asset/img/couple5.jpg" alt="Couple Photo">
+          <img src="asset/img/couple8.jpg" alt="Couple Photo">
+          <img src="asset/img/couple6.jpg" alt="Couple Photo">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 📅 TIMELINE & LOCATION -->
+    <section class="timeline-section">
+      <!-- AKAD -->
+      <h2 class="section-title">Timeline & Location</h2>
+
+      <!-- ITEM -->
+      <div class="timeline-row reveal reveal-left">
+
+        <!-- FOTO -->
+        <div class="timeline-thumb">
+          <img src="asset/img/janggan1.jpg" alt="Resepsi">
+        </div>
+
+        <!-- TEKS ATAS (SEJAJAR FOTO) -->
+        <div class="timeline-text-top">
+          <span class="event-badge">Akad Nikah</span>
+          <h4 class="event-date">26 Maret 2026</h4>
+          <div class="event-time">
+            <span class="time-badge">08.30 s.d 10.00</span>
+            <span class="time-badge">#WIB</span>
+          </div>
+        </div>
+
+        <!-- TEKS BAWAH (FULL WIDTH DI BAWAH FOTO) -->
+        <div class="timeline-text-bottom">
+          <p class="event-location">
+            Dikediaman Mempelai Wanita - Jl.Raya Hantara
+            (Kliwon)- Kuningan - Jawa Barat 45564
+          </p>
+
+          <a href="https://maps.app.goo.gl/Qa3SeAWPXAZyNxzL6" class="maps-link">Buka Google Maps &gt;&gt;&gt;</a>
+        </div>
+
+      </div>
+      <!-- RESEPSI -->
+      <!-- ITEM -->
+      <div class="timeline-row reveal reveal-right">
+
+        <!-- FOTO -->
+        <div class="timeline-thumb">
+          <img src="asset/img/Korean4.jpg" alt="Resepsi">
+        </div>
+
+        <!-- TEKS ATAS (SEJAJAR FOTO) -->
+        <div class="timeline-text-top">
+          <span class="event-badge">Resepsi</span>
+
+          <h4 class="event-date">26 Maret 2026</h4>
+
+          <div class="event-time">
+            <span class="time-badge">11.00 s.d 23.00</span>
+            <span class="time-badge">#WIB</span>
+          </div>
+        </div>
+
+        <!-- TEKS BAWAH (FULL WIDTH DI BAWAH FOTO) -->
+        <div class="timeline-text-bottom">
+          <p class="event-location">
+            Dikediaman Mempelai Wanita - Jl.Raya Hantara
+            (Kliwon)- Kuningan - Jawa Barat 45564
+          </p>
+
+          <a href="https://maps.app.goo.gl/Qa3SeAWPXAZyNxzL6" class="maps-link">Buka Google Maps &gt;&gt;&gt;</a>
+        </div>
+
+      </div>
+      <!-- BUTTON -->
+      <button class="confirm-btn" data-bs-toggle="modal" data-bs-target="#rsvpModal">
+        KONFIRMASI KEHADIRAN
+      </button>
+
+    </section>
+
+    <!-- MODAL -->
+
+    <!-- CountDown -->
+    <section class="countdown-section">
+
+      <h2 class="section-title">See you on the big day!</h2>
+
+      <div class="countdown-wrapper">
+        <div class="countdown-box">
+          <span id="days" class="countdown-number">00</span>
+          <span class="countdown-label">Hari</span>
+        </div>
+
+        <div class="countdown-box">
+          <span id="hours" class="countdown-number">00</span>
+          <span class="countdown-label">Jam</span>
+        </div>
+
+        <div class="countdown-box">
+          <span id="minutes" class="countdown-number">00</span>
+          <span class="countdown-label">Menit</span>
+        </div>
+
+        <div class="countdown-box">
+          <span id="seconds" class="countdown-number">00</span>
+          <span class="countdown-label">Detik</span>
+        </div>
+      </div>
+
+      <p id="countdownDone" class="countdown-done hidden">
+        ✨ Acara Telah Dimulai ✨
+      </p>
+
+
+    </section>
+
+
+    <!-- 🎁 WEDDING GIFT -->
+    <section class="wedding-gift">
+      <h3>Wedding Gift</h3>
+      <p class="gift-desc">
+        Doa restu Anda adalah kado terindah bagi kami.
+        Namun,bagi Anda yang ingin memberikan tanda kasih
+        sebagai bentuk apresiasi, kami menyediakan sarana berikut:
+      </p>
+
+      <div class="gift-wrapper">
+
+        <!-- BANK 1 -->
+        <div class="gift-card fade reveal">
+          <span class="gift-label">Transfer Bank</span>
+          <div class="gift-bank-header">
+            <div class="bank-info">
+              <img src="asset/img/bca.png" alt="BCA" class="bank-logo">
+              <h4>Bank BCA</h4>
+            </div>
+
+            <button class="copy-btn" onclick="copyText('rekening1',this)">
+              Salin
+            </button>
+          </div>
+
+          <p id="rekening1" class="rekening">5520828739</p>
+          <small>a.n. Muhamad Yunus</small>
+
+          <!-- </div> -->
+
+
+          <!-- BANK 2 -->
+          <!-- <div class="gift-card"> -->
+          <div class="gift-divider"></div>
+          <span class="gift-label">Transfer Bank</span>
+          <div class="gift-bank-header">
+            <div class="bank-info">
+              <img src="asset/img/mandiri.png" alt="BCA" class="bank-logo">
+              <h4>Bank MANDIRI</h4>
+            </div>
+
+            <button class="copy-btn" onclick="copyText('rekening2',this)">
+              Salin
+            </button>
+          </div>
+
+          <p id="rekening2" class="rekening">1340021765937</p>
+          <small>a.n. Lisfia Nurhalisa</small>
+
+        </div>
+
+        <!-- ALAMAT -->
+        <div class="gift-card fade reveal">
+          <span class="gift-label">Kirim Kado</span>
+          <h4>Alamat</h4>
+          <p id="alamatGift" class="alamat">
+            Jl. Raya Hantara - Kliwon, Hantara<br>
+            Hantara - Kuningan - Jawa Barat 45564 (Ibu Yanah)
+          </p>
+          <button class="copy-btn" onclick="copyText('alamatGift',this)">Salin Alamat</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 💬 UCAPAN -->
+
+    <section class="guestbook">
+      <h3>Wishes & Prayers</h3>
+
+      <form id="guestForm">
+        <input type="text" id="guestName" placeholder="Your Name..." required>
+        <textarea id="guestMessage" placeholder="Wishes & Prayers" required></textarea>
+        <button type="submit">Kirim</button>
+      </form>
+
+      <!-- LIST UCAPAN -->
+      <!-- tambah infinite scroll ya nanti  -->
+      <div id="wishSection">
+        <div id="guestList" class="guest-list">
+      </div>
+
+      </div>
+    </section>
+
+
+    <!-- 🎞 LOVE STORY -->
+    <section class="love-story-section">
+      <h3 class="section-title">Our Love Story</h3>
+
+      <div class="love-story-card ">
+        <div class="story-main reveal reveal-left">
+
+          <div class="story-image">
+            <img src="asset/img/episode1.jpeg" alt="Love Story">
+          </div>
+
+          <div class="story-content">
+            <span class="episode">Episode 1 :</span>
+
+            <h4 class="story-title">
+              Skenario Langit<br>
+            </h4>
+
+            <span class="story-year">Titik Temu</span>
+          </div>
+        </div>
+
+        <p class="story-desc">
+          Semesta memiliki cara unik untuk mempertemukan dua jiwa.
+          Di antara keramaian dunia, Yunus dan Lisfia dipertemukan dalam situasi yang tepat
+          sebuah awal sederhana yang menjadi pondasi segalanya.
+        </p>
+        <div class="love-divider"></div>
+      </div>
+      <!-- EPISODE 2 -->
+      <div class="story-main reveal reveal-right">
+
+        <div class="story-image">
+          <img src="asset/img/episode2.jpg" alt="Love Story">
+        </div>
+
+        <div class="story-content">
+          <span class="episode">Episode 2 :</span>
+
+          <h4 class="story-title">
+            Menyelaraskan Hati<br>
+          </h4>
+
+          <span class="story-year">Bertumbuh Searah</span>
+        </div>
+      </div>
+
+      <p class="story-desc">
+        Berjalan beriringan, menyelaraskan langkah. Kami berjuang bersama karena kami percaya bahwa cinta
+        adalah tentang tumbuh secara searah. Cinta bukan hanya tentang perasaan,
+        melainkan tentang kesiapan untuk tumbuh bersama, dalam setiap langkah, dan memantapkan hati.
+        <!-- kami belajar untuk saling melengkapi, menyatukan visi, -->
+      </p>
+      <div class="love-divider"></div>
+
+      </div>
+
+
+      <!-- episode 3 -->
+      <div class="story-main reveal reveal-left">
+
+        <div class="story-image">
+          <img src="asset/img/episode3.jpg" alt="Love Story">
+        </div>
+
+        <div class="story-content">
+          <span class="episode">Episode 3 :</span>
+
+          <h4 class="story-title">
+            Menenun Komitmen<br>
+          </h4>
+
+          <span class="story-year">Muara Hati</span>
+        </div>
+      </div>
+
+      <p class="story-desc">
+        kami sepakat untuk melangkah lebih jauh. Kesiapan hati menjadi kunci bagi kami untuk merencanakan masa depan,
+        Inilah muara dari segala pencarian. Sebuah awal dari selamanya yang tertulis oleh kasih dan dibimbing oleh
+        keyakinan.
+      </p>
+      <div class="love-divider"></div>
+
+      </div>
+
+      <!-- episode 4 -->
+      <div class="story-main reveal reveal-right">
+
+        <div class="story-image">
+          <img src="asset/img/episode4.jpg" alt="Love Story">
+        </div>
+
+        <div class="story-content">
+          <span class="episode">Episode 4 :</span>
+
+          <h4 class="story-title">
+            Menuju Keabadian<br>
+          </h4>
+
+          <span class="story-year">Janji Suci</span>
+        </div>
+      </div>
+
+      <p class="story-desc">
+        Setelah perjalanan panjang penuh makna, kami sampai pada titik ini.
+        Sebuah keputusan untuk memulai babak baru. Dengan penuh rasa syukur,
+        kami siap mengukir sejarah baru dalam ikatan pernikahan yang suci.
+      </p>
+      <div class="love-divider"></div>
+
+      </div>
+    </section>
+
+
+
+    <!-- 🎞 GALERI FOTO -->
+    <section class="gallery-section">
+      <h3 class="section-title">Our Memories</h3>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/janggan1.jpg" alt="Gallery 1">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/janggan2.jpg" alt="Gallery 2">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan3.jpg" alt="Gallery 3">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan4.jpg" alt="Gallery 4">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan5.jpg" alt="Gallery 5">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan6.jpg" alt="Gallery 6">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan7.jpg" alt="Gallery 7">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan8.jpg" alt="Gallery 8">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan9.jpg" alt="Gallery 9">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan10.jpg" alt="Gallery 10">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/PersonJ1.jpg" alt="Gallery 11">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/PersonJL1.jpg" alt="Gallery 12">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/PersonJ2.jpg" alt="Gallery 13">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/PersonJL2.jpg" alt="Gallery 14">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/PersonJL3.jpg" alt="Gallery 17">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/PersonJ3.jpg" alt="Gallery 20">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan16.jpg" alt="Gallery 16">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan18.jpg" alt="Gallery 18">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan19.jpg" alt="Gallery 19">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/korean1.jpg" alt="Gallery 1">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/korean2.jpg" alt="Gallery 2">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Korean3.jpg" alt="Gallery 3">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Korean4.jpg" alt="Gallery 4">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Korean5.jpg" alt="Gallery 5">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Korean6.jpg" alt="Gallery 6">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Korean7.jpg" alt="Gallery 7">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Korean8.jpg" alt="Gallery 8">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Korean9.jpg" alt="Gallery 9">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Korean10.jpg" alt="Gallery 10">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/PersonKL1.jpg" alt="Gallery 12">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/PersonK1.jpg" alt="Gallery 13">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/PersonKL2.jpg" alt="Gallery 13">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Korean13.jpg" alt="Gallery 13">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/PersonK2.jpg" alt="Gallery 14">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/PersonKL2.jpg" alt="Gallery 14">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Korean15.jpg" alt="Gallery 15">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/PersonKL3.jpg" alt="Gallery 15">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Korean16.jpg" alt="Gallery 16">
+        </div>
+
+        <!-- Spotlight -->
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan11.jpg" alt="Gallery 11">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan12.jpg" alt="Gallery 12">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan13.jpg" alt="Gallery 13">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan14.jpg" alt="Gallery 14">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan17.jpg" alt="Gallery 17">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Janggan20.jpg" alt="Gallery 20">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Korean11.jpg" alt="Gallery 11">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Korean12.jpg" alt="Gallery 12">
+        </div>
+
+        <div class="gallery-item reveal">
+          <img src="asset/img/Korean14.jpg" alt="Gallery 14">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LIGHTBOX SLIDER -->
+    <div class="gallery-lightbox" id="lightbox">
+      <button class="nav prev">‹</button>
+
+      <img class="lightbox-img" src="" alt="">
+
+      <button class="nav next">›</button>
+    </div>
+
+
+    <!-- 🔚 CLOSING -->
+    <section class="closing-section reveal">
+
+      <img src="asset/img/logo-fixnikah.png" alt="Nikahfix" class="closing-logo">
+
+      <p class="closing-quote">
+          "Percayalah, Allah Menggenggam semua doa kita. Lalu dilepaskan-Nya satu persatu disaat yang paling tepat."
+      </p>
+
+      <div class="closing-main">
+        <p class="closing-tagline">
+          See you on the big day!
+        </p>
+
+        <h2 class="closing-name">
+          YUNUS & LISFIA
+        </h2>
+      </div>
+
+      <p class="closing-footer">
+         lisyuniverse &copy; <span id="year"></span>
+      </p>
+
+    </section>
+
+    <audio id="bgMusic" loop>
+      <source src="asset/music/Rizky Febian Feat. Mahalini - Bermuara.mp3" type="audio/mpeg">
+    </audio>
+  </main>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/countdown.js" defer></script>
+  <script src="js/form-handler.js" defer></script>
+</body>
+
+<audio id="bgMusic" class="hidden" loop>
+  <source src="asset/music/Rizky Febian Feat. Mahalini - Bermuara.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicToggle" class="music-toggle paused" aria-label="Music Control">
+  <i class="fa-solid fa-volume-xmark"></i>
+</button>
+
+<!-- RSVP MODAL -->
+<div class="modal" id="rsvpModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rsvp-modal">
+
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Konfirmasi Kehadiran</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="rsvpForm" action="javascript:void(0)">
+
+          <div class="mb-3">
+            <label class="form-label">Nama</label>
+            <input type="text" id="rsvpName" name="name" class="form-control" placeholder="Nama Anda" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Jumlah Tamu</label>
+            <select id="rsvpGuests" name="guests" class="form-select">
+              <option value="1">1 Orang</option>
+              <option value="2">2 Orang</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Konfirmasi Kehadiran</label>
+            <select id="rsvpAttendance" name="attendance" class="form-select" required>
+              <option value="">-- Pilih --</option>
+              <option value="Hadir">Hadir</option>
+              <option value="Tidak Hadir">Tidak Hadir</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-danger w-100">
+            Kirim Konfirmasi
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<div id="toast" class="nf-toast"></div>
+
+</html>
