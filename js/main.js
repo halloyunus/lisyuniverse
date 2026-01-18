@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (guestTo) {
     guestEl.innerHTML = `Bapak/Ibu/Saudara/i <br> <strong>${capitalizeWords(guestTo)}</strong>`;
   } else {
-    guestEl.innerText = "Bapak/Ibu/Saudara/i yang kami hormati";
+    guestEl.innerHTML = "Bapak/Ibu/Saudara/i <br> yang kami hormati";
   }
 });
 
