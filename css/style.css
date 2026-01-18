@@ -280,7 +280,7 @@ a {
   display: flex;
 }
 @media (min-width: 768px) {
-  .poster-content {
+  .poster-box {
     max-width: 420px;
     margin: auto;
   }
@@ -682,7 +682,7 @@ a {
   border-radius: 6px;
   padding: 12px;
   color: #fff;
-  font-size: .85rem;
+  font-size: 16px;
 }
 
 #guestForm textarea {
