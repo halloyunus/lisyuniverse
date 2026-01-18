@@ -1319,6 +1319,10 @@ footer h4 {
   word-break: break-all;
 }
 
+.rekening {
+  text-decoration: none !important;
+  color: inherit;
+}
 .gift-card small {
   display: block;
   margin-bottom: 15px;
