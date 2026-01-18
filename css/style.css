@@ -658,6 +658,7 @@ a {
   color: #fff;
   max-width: 420px;
   margin: auto;
+  transform: none !important;
 }
 
 /* TITLE */
@@ -673,6 +674,9 @@ a {
   flex-direction: column;
   gap: 12px;
   margin-bottom: 35px;
+  transform: none !important;
+
+
 }
 
 #guestForm input,
@@ -682,7 +686,9 @@ a {
   border-radius: 6px;
   padding: 12px;
   color: #fff;
-  font-size: 16px;
+  font-size: 16px !important;
+  -webkit-text-size-adjust: 100%;
+
 }
 
 #guestForm textarea {
