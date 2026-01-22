@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "undangandigital");
+include '../config/db.php';
 
 $result = $conn->query("SELECT name, message FROM wishes ORDER BY id DESC ");
 

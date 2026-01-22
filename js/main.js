@@ -8,11 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const invitation = document.getElementById("invitation");
   const bgMusic = document.getElementById("bgMusic");
   const musicToggle = document.getElementById("musicToggle");
+  const ytplayer = document.getElementById("ytplayer");
 
   if (!openBtn || !posterBox || !bgMusic) return;
 
   const musicIcon = musicToggle.querySelector("i");
   let posterEntered = false;
+  bgMusic.muted = true; // mute the audio initially keperluan hosting autoplay policy
 
   /* STEP 1 */
   openBtn.addEventListener("click", () => {
@@ -46,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   bgMusic.volume = 0.6;
 
   function startMusic() {
+    bgMusic.muted = false; // unmute the audio keperluan hosting autoplay policy
     bgMusic.play().then(() => {
       musicToggle.classList.add("playing");
       musicIcon.className = "fa-solid fa-volume-high";

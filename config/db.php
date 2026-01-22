@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "undangandigital";
+$user = "lisyuniv_lisyuniverse";
+$pass = "lisyuniverse20260326";
+$db   = "lisyuniv_undangandigital";
 
 $conn = new mysqli($host, $user, $pass, $db);
 
