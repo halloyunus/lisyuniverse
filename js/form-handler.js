@@ -454,7 +454,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   list.addEventListener("scroll", reveal);
-  loadWishes();
+  // loadWishes(); // <-- Cukup comment bagian ini agar tidak mencari database/file PHP
 });
 
 // =========================================================================
