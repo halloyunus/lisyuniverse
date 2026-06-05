@@ -384,7 +384,7 @@ document.addEventListener("DOMContentLoaded", () => {
     infoMessage.style.fontSize = "1rem";
     infoMessage.style.fontStyle = "italic";
     infoMessage.style.color = "#555"; // Sesuaikan dengan tone warna web Anda
-    infoMessage.innerHTML = "Ucapan dan doa dari rekan - rekan, keluarga dll sudah kami terima, terimakasih ❤️";
+    infoMessage.innerHTML = "Doa dan Harapan dari rekan - rekan, saudara, sahabat, dan keluarga sudah kami terima, terimakasih ya  ❤️";
     
     // Taruh pesan di bagian paling atas di dalam form
     form.insertBefore(infoMessage, form.firstChild);
