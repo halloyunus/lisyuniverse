@@ -141,16 +141,22 @@
 // }
 // end comment before
 
+// =========================================================================
+// CONFIGURATION & TIME VALIDATION
+// =========================================================================
+
 // Tentukan tanggal target acara Anda (Format: YYYY-MM-DDTHH:mm:ss)
 const TARGET_DATE = new Date("2026-03-26T08:00:00").getTime();
 
-// Fungsi untuk mengecek apakah waktu sudah melewati target (Expired)
+// Fungsi global untuk mengecek apakah waktu sudah melewati target (Expired)
 function isCountdownExpired() {
   const now = new Date().getTime();
   return now > TARGET_DATE;
 }
 
-// Guestbook Form Submission and Loading Wishes
+// =========================================================================
+// GUESTBOOK & WISHES LOGIC (DOMContentLoaded)
+// =========================================================================
 document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.getElementById("guestForm");
@@ -158,17 +164,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!form || !list) return;
 
-  // JIKA EXPIRED: Kunci input ucapan dari awal halaman dimuat
+  // SYSTEM AUTO-LOCK: Jika waktu countdown sudah terlewati
   if (isCountdownExpired()) {
+    // 1. Kunci tombol submit dan ubah teksnya sesuai request
     const submitBtn = form.querySelector("button[type='submit']");
-    if (submitBtn) submitBtn.disabled = true;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Wishes & Prayers Closed";
+    }
+    
+    // 2. Kunci semua field input agar tidak bisa diketik sama sekali
     form.querySelectorAll("input, textarea").forEach(el => el.disabled = true);
   }
 
+  // Handle Submit Form Ucapan
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // VALIDASI COUNTDOWN EXPIRED
+    // Proteksi ganda jika user mencoba tembus lewat inspect element
     if (isCountdownExpired()) {
       showToast("Mohon maaf, periode pengiriman ucapan sudah berakhir 🙏", "error");
       return;
@@ -197,7 +210,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (text.trim().toLowerCase() === "success") {
         form.reset();
         loadWishes();
-
         showToast("Ucapan berhasil dikirim ❤️", "success");
       } else {
         showToast("Gagal menyimpan ucapan 😢", "error");
@@ -209,6 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Handle Ambil Data Ucapan
   async function loadWishes() {
     const res = await fetch("api/get-wishes.php");
     const data = await res.json();
@@ -228,18 +241,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   list.addEventListener("scroll", reveal);
-
   loadWishes();
 });
 
-
-
-// RSVP Form Submission
+// =========================================================================
+// RSVP FORM SUBMISSION LOGIC
+// =========================================================================
 const rsvpForm = document.getElementById("rsvpForm");
 
-// JIKA EXPIRED: Kunci tombol buka/submit RSVP dari awal halaman dimuat
+// SYSTEM AUTO-LOCK RSVP: Ubah tombol pemicu modal RSVP jika waktu sudah lewat
 if (isCountdownExpired()) {
-  const rsvpBtn = document.querySelector("[data-bs-target='#rsvpModal']"); // Sesuaikan selector tombol trigger modal Anda
+  const rsvpBtn = document.querySelector("[data-bs-target='#rsvpModal']"); 
   if (rsvpBtn) {
     rsvpBtn.disabled = true;
     rsvpBtn.innerText = "RSVP Ditutup";
@@ -249,7 +261,7 @@ if (isCountdownExpired()) {
 rsvpForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  // VALIDASI COUNTDOWN EXPIRED
+  // Proteksi ganda di sisi client agar data tidak ter-post ke PHP
   if (isCountdownExpired()) {
     showToast("Mohon maaf, konfirmasi RSVP sudah ditutup 🙏", "error");
     bootstrap.Modal.getInstance(document.getElementById("rsvpModal")).hide();
@@ -277,14 +289,9 @@ rsvpForm.addEventListener("submit", function (e) {
     .then(res => res.text())
     .then(res => {
       if (res.trim() === "success") {
-
-        bootstrap.Modal.getInstance(
-          document.getElementById("rsvpModal")
-        ).hide();
-
+        bootstrap.Modal.getInstance(document.getElementById("rsvpModal")).hide();
         rsvpForm.reset();
         showToast("Konfirmasi berhasil❤️", "success");
-
       } else {
         showToast("Gagal menyimpan RSVP 😢", "error");
       }
@@ -294,8 +301,9 @@ rsvpForm.addEventListener("submit", function (e) {
     });
 });
 
-
-// RSVP Form Logic: Disable Guests if Not Attending
+// =========================================================================
+// RSVP FORM INTERACTIVE LOGIC
+// =========================================================================
 const attendanceSelect = document.getElementById("rsvpAttendance");
 const guestsSelect = document.getElementById("rsvpGuests");
 
@@ -304,14 +312,16 @@ attendanceSelect.addEventListener("change", () => {
     guestsSelect.value = 0;
     guestsSelect.disabled = true;
   } else {
-    // Jika waktu expired, abaikan perubahan toggle ini agar tetap disabled
+    // Dropdown jumlah tamu tetap terkunci jika sudah expired
     if (!isCountdownExpired()) {
       guestsSelect.disabled = false;
     }
   }
 });
 
-// Toast Notification
+// =========================================================================
+// SYSTEM TOAST NOTIFICATION
+// =========================================================================
 function showToast(message, type = "success") {
   const toast = document.getElementById("toast");
   toast.textContent = message;
